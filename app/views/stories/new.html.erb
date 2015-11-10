@@ -1,6 +1,27 @@
 <%= simple_form_for @story do |f| %>
   <%= f.input :title %>
   <%= f.input :subtitle %>
-  <%= f.input :content %>
+  <%= f.input :content, :id => "editor" %>
   <%= f.button :submit %>
 <% end %>
+<hr>
+<div id="editor">
+<h1 id="dante-editor">Click Me Once. Your Title Goes Here.</h1>
+
+<h2>Tell a story about an adventure you've gone on. Tell us about your favorite backpacking adventure. This might also be a great place to add a picture.</h2>
+
+<p>Simply replace and highlight any text here to add text. Press "Enter" to add more text or add images. Click on the image to add a caption. It's easy once you get the hang of it, just play around with it for a minute.</p>
+</div>
+<hr>
+
+<script type="text/javascript">
+  editor = new Dante.Editor(
+    {
+      el: "#editor",
+      upload_url: "/images.json", //it expect an url string in response like /your/server/image.jpg or http://app.com/images/image.jpg
+      store_url: "/save" //post to save
+
+    }
+  );
+  editor.start()
+</script>

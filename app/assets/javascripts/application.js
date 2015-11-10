@@ -13,4 +13,6 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require jquery_ujs
+//= require 'dante'
+//= require underscore
 //= require_tree .

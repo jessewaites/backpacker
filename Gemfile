@@ -27,6 +27,8 @@ gem 'devise'
 
 gem 'bootstrap_form'
 
+gem 'simple_form'
+
 gem 'bootstrap-sass', '~> 3.3.5'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
